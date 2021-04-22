@@ -2,7 +2,7 @@
 version: '3.5'
 services:
   mongo:
-    image: mongo:3.6.18-xenial
+    image: mongo
     container_name: mongo-database
     restart: always
     ports:
@@ -19,6 +19,7 @@ services:
   user-service:
     build: user-service/
     image: user-service
+    container_name: user-service    
     depends_on:
       - mongo
     # network_mode: "host"

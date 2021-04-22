@@ -11,3 +11,10 @@ spring:
 app:
     exceptionMessage: User already exists!
     globalExceptionMessage: Database connectivity lost!
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: DEBUG    
+    org.hibernate: DEBUG
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
